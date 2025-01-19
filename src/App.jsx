@@ -1,6 +1,6 @@
 
 import './App.css'
-import Register from './Register'
+import Submit from './Submit'
 
 function App() {
   
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     
-    <Register/>
+    <Submit/>
     </>
     
       

@@ -1,5 +1,6 @@
 
 import  { useState } from 'react'
+import './Submit.css'
 import Register from './Register'
 
 
@@ -22,27 +23,31 @@ export default function Submit() {
 
     return (
 
-        <div>
+        <>
+      
             <h2>Registration Form</h2>
-            <Register addNewData={addNewData} /> <hr />
+            <Register addNewData={addNewData} /> <br /> <hr />
             <h2> All Data</h2>
+            <div className='data-container' >
+
+     
         {
             data.map((item, index)=>{
                 return(
-                    <div key={index}>
-                        <h1> name: {item.name}</h1>
-                        <h1> Email:{item.email}</h1>
-                        <h1> Password: {item.password}</h1>
-                        <h1> Age:{item.age}</h1>
-                        <h1> address:{item.address}</h1>
+                    <div className='data' key={index}>
+                        <span> <b>Name:</b> &nbsp; &nbsp;  {item.name}</span> <br />  
+                        <span> <b>Email:</b> &nbsp; &nbsp; {item.email}</span> <br />
+                        <span> <b>Password:</b> &nbsp; &nbsp; {item.password}</span> <br />
+                        <span> <b>Age:</b> &nbsp; &nbsp; {item.age}</span> <br />
+                        <span> <b>Address:</b> &nbsp; &nbsp;  {item.address}</span>
                     </div>
                 )
             })
         }
         
-        
-        
         </div>
+        
+        </>
         
     )
 };
